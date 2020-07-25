@@ -1,0 +1,1 @@
+W tym projekcie znajduje się slider zbudowany na zajęciach z HTML i JS
