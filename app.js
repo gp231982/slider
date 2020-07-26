@@ -14,28 +14,33 @@ let slide2 = document.querySelector("#slide2");
 let slide3 = document.querySelector("#slide3");
 let slide4 = document.querySelector("#slide4");
 
-let showSlide1 = () => {
+let hideActiveElement = () =>{
   let activeElement = document.querySelector(".active");
   activeElement.classList.remove("active");
+}
+
+let showSlide = (slideNumber) => {
+  //Nazwa_zmiennej_ze_slajdem.classList.add("active");
+}
+
+let showSlide1 = () => {
+  hideActiveElement();
   slide1.classList.add("active");
 };
 
 
 let showSlide2 = () => {
-  let activeElement = document.querySelector(".active");
-  activeElement.classList.remove("active");
+  hideActiveElement();
   slide2.classList.add("active");
 };
 
 let showSlide3 = () =>{
-  let activeElement = document.querySelector(".active");
-  activeElement.classList.remove("active");
+  hideActiveElement();
   slide3.classList.add("active");
 }
 
 let showSlide4 = () => {
-  let activeElement = document.querySelector(".active");
-  activeElement.classList.remove("active");
+  hideActiveElement();
   slide4.classList.add("active");
 };
 
