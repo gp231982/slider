@@ -7,12 +7,10 @@
   //3.3 Usunć klasę active z obrazka 1
     //3.3.1 - Znaleźć obrazek 1 - done
 
+let dot1 = document.querySelector("#dot1");
 let dot2 = document.querySelector("#dot2");
 let dot3 = document.querySelector("#dot3");
-let slide1 = document.querySelector("#slide1");
-let slide2 = document.querySelector("#slide2");
-let slide3 = document.querySelector("#slide3");
-let slide4 = document.querySelector("#slide4");
+let dot4 = document.querySelector("#dot4");
 
 let hideActiveElement = () =>{
   let activeElement = document.querySelector(".active");
@@ -20,28 +18,28 @@ let hideActiveElement = () =>{
 }
 
 let showSlide = (slideNumber) => {
-  //Nazwa_zmiennej_ze_slajdem.classList.add("active");
+  document.querySelector("#slide" + slideNumber).classList.add("active");
 }
 
 let showSlide1 = () => {
   hideActiveElement();
-  slide1.classList.add("active");
+  showSlide(1);
 };
 
 
 let showSlide2 = () => {
   hideActiveElement();
-  slide2.classList.add("active");
+  showSlide(2);
 };
 
 let showSlide3 = () =>{
   hideActiveElement();
-  slide3.classList.add("active");
+  showSlide(3);
 }
 
 let showSlide4 = () => {
   hideActiveElement();
-  slide4.classList.add("active");
+  showSlide(4);
 };
 
 
