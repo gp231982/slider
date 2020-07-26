@@ -1,10 +1,60 @@
-let arrowRight = document.querySelector("#arrow-right");
+// Gdy klikamy na 2 kropke pojawia się drugi obrazek
+// 1. Znajdźmy kropkę nr. 2 - done
+// 2. Niech kropka 'slucha' na kliknięcie - done
+// 3. Po kliknięciu, niech pojawi się obrazek nr. 2 - done
+  //3.1 Znaleźć obrazek 2 - done
+  //3.2 Dodaćdo obrazka 2 klasę "active"-done
+  //3.3 Usunć klasę active z obrazka 1
+    //3.3.1 - Znaleźć obrazek 1 - done
 
-let function3 = () => {
-  console.log("strzałka kliknięta!");
+let dot2 = document.querySelector("#dot2");
+let dot3 = document.querySelector("#dot3");
+let slide1 = document.querySelector("#slide1");
+let slide2 = document.querySelector("#slide2");
+let slide3 = document.querySelector("#slide3");
+let slide4 = document.querySelector("#slide4");
+
+let showSlide1 = () => {
+  let activeElement = document.querySelector(".active");
+  activeElement.classList.remove("active");
+  slide1.classList.add("active");
 };
 
-arrowRight.addEventListener("click", function3);
+
+let showSlide2 = () => {
+  let activeElement = document.querySelector(".active");
+  activeElement.classList.remove("active");
+  slide2.classList.add("active");
+};
+
+let showSlide3 = () =>{
+  let activeElement = document.querySelector(".active");
+  activeElement.classList.remove("active");
+  slide3.classList.add("active");
+}
+
+let showSlide4 = () => {
+  let activeElement = document.querySelector(".active");
+  activeElement.classList.remove("active");
+  slide4.classList.add("active");
+};
+
+
+dot1.addEventListener("click", showSlide1); //jeśli ktoś cię strzałko kliknie to zrób to co mówi funkcja showSlide2
+dot2.addEventListener("click", showSlide2);
+dot3.addEventListener("click", showSlide3);
+dot4.addEventListener("click", showSlide4);
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -75,7 +125,6 @@ arrowRight.addEventListener("click", function3);
 // //   return wynik;
 // // };
 
-
 // // let EURtoUSD = (euro) => {
 // //   let wynik = convert(euro,1.17);
 // //   return wynik;
@@ -86,7 +135,6 @@ arrowRight.addEventListener("click", function3);
 
 // // console.log(euro);
 // // console.log(usd);
-
 
 // let Potega = (liczba, wykladnik) =>{
 // let wynik = Math.pow(liczba, wykladnik);
