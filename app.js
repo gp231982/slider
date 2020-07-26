@@ -18,27 +18,24 @@ let hideActiveElement = () =>{
 }
 
 let showSlide = (slideNumber) => {
+  hideActiveElement();
   document.querySelector("#slide" + slideNumber).classList.add("active");
 }
 
 let showSlide1 = () => {
-  hideActiveElement();
   showSlide(1);
 };
 
 
 let showSlide2 = () => {
-  hideActiveElement();
   showSlide(2);
 };
 
 let showSlide3 = () =>{
-  hideActiveElement();
   showSlide(3);
 }
 
 let showSlide4 = () => {
-  hideActiveElement();
   showSlide(4);
 };
 
