@@ -84,11 +84,11 @@ arrowLeft.addEventListener("click", showPreviousSlide);
 let onKeyDown = (event) => {
   if (event.keyCode === 39) {
     showNextSlide();
-  } 
-  
+  }
+
   if (event.keyCode === 37) {
     showPreviousSlide();
-  } 
+  }
 };
 
 //jeśli klikamy strzałkę w prawo
@@ -99,6 +99,52 @@ let onKeyDown = (event) => {
 document.addEventListener("keydown", onKeyDown);
 
 showSlide(activeSlideNumber);
+
+//jest podzielna przez 15 - FizzBuzz!
+// jest podzielna przez 3 - Fizz.
+// jest podzielna przez 5 - Buzz.
+// W innym przypadku - wyświetlamy liczbę.
+
+//fizzBuzz(1);
+//###1
+
+//fizzBuzz(3);
+//### Fizz;
+
+//fizzBuzz(5);
+//### Buzz;
+
+//fizzBuzz(15);
+//### FizzBuzz;
+
+let fizzBuzz = (n) => {
+  if (n % 15 === 0) {
+    console.log("FizzBuzz!");
+  } else if (n % 5 === 0) {
+    console.log("Buzz");
+  } else if (n % 3 === 0) {
+    console.log("Fizz");
+  } else {
+    console.log(n);
+  }
+};
+fizzBuzz(7);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // let dlugoscNapisu = (napis) => {
 //   return napis.length;
