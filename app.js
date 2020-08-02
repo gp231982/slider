@@ -1,18 +1,6 @@
-// Gdy klikamy na 2 kropke pojawia się drugi obrazek
-// 1. Znajdźmy kropkę nr. 2 - done
-// 2. Niech kropka 'slucha' na kliknięcie - done
-// 3. Po kliknięciu, niech pojawi się obrazek nr. 2 - done
-//3.1 Znaleźć obrazek 2 - done
-//3.2 Dodaćdo obrazka 2 klasę "active"-done
-//3.3 Usunć klasę active z obrazka 1
-//3.3.1 - Znaleźć obrazek 1 - done
+
 
 let activeSlideNumber = 1;
-
-let dot1 = document.querySelector("#dot1");
-let dot2 = document.querySelector("#dot2");
-let dot3 = document.querySelector("#dot3");
-let dot4 = document.querySelector("#dot4");
 
 let numberOFSlides = document.querySelectorAll(".slide").length;
 
@@ -26,6 +14,7 @@ let hideActiveElement = () => {
   activeDot.classList.remove("dot-active");
 };
 
+
 let showSlide = (slideNumber) => {
   activeSlideNumber = slideNumber;
   hideActiveElement();
@@ -33,21 +22,6 @@ let showSlide = (slideNumber) => {
   document.querySelector("#dot" + slideNumber).classList.add("dot-active");
 };
 
-let showSlide1 = () => {
-  showSlide(1);
-};
-
-let showSlide2 = () => {
-  showSlide(2);
-};
-
-let showSlide3 = () => {
-  showSlide(3);
-};
-
-let showSlide4 = () => {
-  showSlide(4);
-};
 
 let showNextSlide = function () {
   //to jest to samo co zwykła funkcja strzałkowa jesli w środku funkcji nie ma "this".
@@ -67,14 +41,6 @@ let showPreviousSlide = () => {
   }
 };
 
-dot1.addEventListener("click", showSlide1); //jeśli ktoś cię strzałko kliknie to zrób to co mówi funkcja showSlide2
-dot2.addEventListener("click", showSlide2);
-dot3.addEventListener("click", showSlide3);
-dot4.addEventListener("click", showSlide4);
-
-//1. znajdz strzałkę w prawo//
-//2. POkaż nastepny slide po kliknięciu na strząłkę w prawo //
-
 let arrowRight = document.querySelector("#arrow-right"); // szkanie elementu o danym Id//
 let arrowLeft = document.querySelector("#arrow-left");
 
@@ -91,14 +57,42 @@ let onKeyDown = (event) => {
   }
 };
 
-//jeśli klikamy strzałkę w prawo
-//showNextSlide();
-//Jeśli klikamy strzałkę w lewo
-//showPreviousSlide();
-
 document.addEventListener("keydown", onKeyDown);
 
 showSlide(activeSlideNumber);
+
+
+for (let i = 0; i<4; i=i+1){
+// i===0 true
+let showSlideByNumber = () =>{
+  showSlide(i+1);
+}
+document.querySelector("#dot"+(i+1)).addEventListener("click",showSlideByNumber);
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //jest podzielna przez 15 - FizzBuzz!
 // jest podzielna przez 3 - Fizz.
@@ -128,23 +122,37 @@ let fizzBuzz = (n) => {
     console.log(n);
   }
 };
-fizzBuzz(7);
+fizzBuzz(45);
 
+//jeżeli n === 1 -> 1;
+//jeżeli n !== 1 -> n*silnia(n-1)
 
+let silnia = (n) => {
+  if (n === 1) {
+    return 1;
+  } else {
+    return n * silnia(n - 1);
+  }
+};
 
+console.log(silnia(6));
 
+//wyznaczanie n-tego wyrazu ciagu fibonacciego.
 
+//jeżeli n===1 lub n===2 -> 1
+//jeżeli n!==1 i n!==2 -> fibonacci(n-1) + fibonacci(n-2)
 
+let fibonacci = (n) => {
+  if (n === 1) {
+    return 1;
+  } else if (n === 2) {
+    return 1;
+  } else {
+    return fibonacci(n - 1) + fibonacci(n - 2);
+  }
+};
 
-
-
-
-
-
-
-
-
-
+console.log(fibonacci(6));
 
 // let dlugoscNapisu = (napis) => {
 //   return napis.length;
@@ -214,3 +222,33 @@ fizzBuzz(7);
 // console.log(Potega(3,10));
 // console.log(Potega(1,10));
 // console.log(Potega(20,10));
+
+showSlide(activeSlideNumber);
+
+for (let i = 0; i < 10; i = i + 1) {
+  console.log(name);
+}
+
+// //for (
+//   let rzeczyDoSpakowania = 100;
+//   rzeczyDoSpakowania > 0;
+//   rzeczyDoSpakowania = rzeczyDoSpakowania - 10)
+//  {
+//   wezRzeczy();
+//   wlożRzeczy();
+// //};
+
+// function nieparzyste(n) {
+//   for (let i = 0; i < n; i = i + 1)
+//   console.log(2*i+1);
+// }
+
+// nieparzyste(10)
+
+function kwadraty(n) {
+  for (let i = 0; i < n; i = i + 1)
+  console.log(i*i);
+}
+
+kwadraty(20)
+
